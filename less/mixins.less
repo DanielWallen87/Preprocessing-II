@@ -1,1 +1,12 @@
 // Mixins in here
+.button-transform(@bg-color: teal, @height: 50px, @width: 200px, @font: white) {
+    height: @height;
+    width: @width;
+    background: @bg-color;
+    color: @font;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 2rem;
+}
