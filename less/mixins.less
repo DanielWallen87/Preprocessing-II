@@ -1,1 +1,33 @@
 // Mixins in here
+.button-transform(@bg-color: teal, @height: 50px, @width: 200px, @font: white) {
+    height: @height;
+    width: @width;
+    background: @bg-color;
+    color: @font;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 2rem;
+    opacity: 1;
+    transition: 0.6s;
+
+    &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+    }
+}
+
+// Tried to add an extra mixin but it isn't working. Feel free to provide me with any suggestions. Tried my usual opacity trick, but that isn't working either. Confused about why because: a) it matches the mix-in above and b) the cursor shows up, so part of it is working. Too bad, because the yellow effect may be cool with the bus theme.
+
+.nav-transform(@background: white, @transition: 2s) {
+    background: @background; 
+    transition: @transition;
+
+    &:hover {
+        color: yellow;
+        -webkit-text-stroke-width: 0.25px;
+        -webkit-text-stroke-color: black;
+        cursor: pointer;
+    }
+}
